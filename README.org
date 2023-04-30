@@ -1,0 +1,7 @@
+* How the `Python3::Python` work?
+Maybe
+#+BEGIN_SRC cmake
+add_library(Python3::Python INTERFACE IMPORTED)
+set_target_properties(Python3::Python PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${Python3_INCLUDE_DIRS}")
+set_target_properties(Python3::Python PROPERTIES INTERFACE_LINK_LIBRARIES "${Python3_LIBRARIES}")
+#+END_SRC
